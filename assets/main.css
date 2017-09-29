@@ -1,0 +1,347 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5vh 14vh 32vh 11vh 18vh 20vh;
+    background-image: url(img/tennisCourt.jpg);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position:
+}
+
+
+.nav-bar {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+.blue{
+    color: blue;
+}
+.nav-bar div {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.modal-container {
+    grid-row-start: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6vh 22vh;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 4.3vh 6vh 0;
+    border-color: transparent #ed490d transparent transparent;
+    margin-left: -1vh;
+}
+
+.modal-title {
+    display: grid;
+    grid-template-columns: 4.3vh 1fr;
+    background-color: color: white;
+    font-size: 2rem;
+    margin-right: 5vh;
+    transform:
+}
+
+.title-background {
+    width: 100%;
+    height: 6vh;
+    background-color: #ed490d;
+    margin-left: -1vh;
+}
+
+.modal-title p {
+    text-align: right;
+    padding-right: 5vh;
+    font-size: 2rem;
+    color: white;
+}
+
+.modal-card {
+    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 2vh;
+    margin-left: 8vh;
+    background-color: white;
+    font-size: 1rem
+}
+
+.modal-card p {
+    padding-left: 1vh;
+}
+
+.modal-img {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    grid-gap: 1vh;
+    padding-left: 1vh
+}
+
+.modal-img img {
+    width: 80%
+}
+
+.modal-img p {
+    text-align: left;
+    grid-column-start: 2 / 11;
+}
+
+.quote-container {
+    grid-row-start: 5;
+    display: grid;
+    grid-template-columns: 2fr 4fr 3fr;
+    align-items: center;
+}
+
+.comilla {
+    color: white;
+    font-size: 6rem;
+    text-align: right;
+    padding-right: 1vw;
+}
+
+.quote-text {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.author {
+    margin: 3vh 3vh 3vh 0vh;
+}
+
+.chevron {
+    grid-row-start: 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: flex-end;
+    padding-bottom: 2vh;
+}
+
+.chevron div {
+    grid-column-start: 2;
+}
+
+
+/*RESPONSIVE*****/
+
+@media screen and (max-width: 1024px) {
+    .container {
+        background-size: cover;
+        max-width: 1024px;
+        width: auto;
+        grid-template-rows: 5vh 7vh 31vh 7vh 19vh 31vh;
+    }
+    .modal-card {
+        align-items: center;
+        align-content: center;
+    }
+    .modal-img {
+        align-items: center;
+    }
+    .quote-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        background-size: cover;
+        max-width: 800px;
+        width: auto;
+        grid-template-rows: 5vh 7vh 31vh 7vh 19vh 31vh;
+        background-position: 1%;
+    }
+    .nav-bar {
+        width: 100%;
+        max-width: 800px;
+    }
+    .nav-bar div {
+        font-size: .8rem;
+        padding-left: 1.7vw;
+        padding-right: 1.7vw;
+    }
+    .nav-bar div a {
+        font-size: .8rem;
+    }
+    
+    .blue{
+        font-size: .8rem
+    }
+    .triangle {
+        margin-left: -1.7vh;
+    }
+    .modal-title {
+        margin-right: 2vh;
+    }
+    .title-background {
+        margin-left: -1.8vh;
+    }
+    .modal-title p {
+        font-size: 1.5rem;
+        margin-right: -3vh;
+        padding-top: 1.5vh;
+    }
+    .modal-card {
+        font-size: .4rem;
+        grid-gap: 1vh;
+        padding-right: 1vh;
+        margin-left: 5vh;
+        align-items: center;
+        align-content: center;
+    }
+    .modal-card p {
+        font-size: .8rem;
+    }
+    .modal-img {
+        align-items: center;
+    }
+    .quote-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .quote-container p {
+        font-size: .9rem;
+    }
+    .quote-text {
+        margin-left: 3vw;
+        margin-top: 3vh;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .container {
+        width: auto;
+        max-width: 420px;
+        background-size: cover;
+        background-position: 1%;
+        grid-template-rows: 5vh 7vh 28vh 2vh 18vh 40vh;
+    }
+    .nav-bar {
+        width: 100%;
+        max-width: 420px;
+    }
+    .nav-bar div {
+        font-size: .5rem;
+        padding: 1vw;
+        line-height: 1.5vh;
+    }
+    .nav-bar div a {
+        font-size: .5rem;
+        line-height: 1.5vh;
+    }
+    
+    .blue{
+        font-size: .5rem;
+    }
+    .triangle {
+        margin-left: -2vh;
+    }
+    .modal-title {
+        margin-right: 1vh;
+    }
+    .title-background {
+        margin-left: -2.2vh;
+    }
+    .modal-title p {
+        font-size: 1rem;
+        margin-right: -3vh;
+        padding-top: 1.5vh;
+    }
+    .modal-card p {
+        font-size: .5rem;
+    }
+    .quote-container p {
+        font-size: .5rem;
+    }
+    .quote-text {
+        margin-left: 4vw;
+    }
+    .comilla {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        grid-template-rows: 5vh 7vh 24vh 1vh 18vh 45vh;
+    }
+    .nav-bar div {
+        font-size: .4rem;
+        padding-bottom: 1vh;
+        padding-top: 1vh;
+        line-height: 1vh;
+    }
+    
+    .blue{
+        font-size: .4rem;
+    }
+    .modal-title p {
+        font-size: .8rem;
+    }
+    .triangle {
+        margin-left: -2vh;
+    }
+    .title-background {
+        margin-left: -2.1vh;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        grid-template-rows: 5vh 7vh 25vh 1vh 18vh 44vh;
+    }
+    .nav-bar div{
+        font-size: .4rem;
+        line-height: 1.5vh;
+    }
+    
+    .nav-bar div a {
+        font-size: .4rem;
+        line-height: 1.5vh;
+    }
+    .modal-title p {
+        font-size: .8rem;
+    }
+    .modal-card p {
+        font-size: .4rem;
+    }
+    .quote-container p {
+        font-size: .4rem;
+    }
+    .triangle {
+        margin-left: -2vh;
+    }
+    .title-background {
+        margin-left: -2vh;
+    }
+}
